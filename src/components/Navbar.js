@@ -1,8 +1,10 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from '@emotion/styled';
-import { rhythm, scale } from '../utils/typography';
 import { FaTwitter, FaFacebook } from 'react-icons/fa';
+
+import { rhythm, scale } from '../utils/typography';
+import Logo from './Logo';
 
 const Container = styled.div`
   height: 45px;
@@ -32,23 +34,6 @@ const FixedContainer = styled.div`
 `;
 
 const carretSpace = rhythm(1 / 5);
-
-const Title = styled.h1`
-  margin-top: 0;
-  margin-bottom: 0;
-  letter-spacing: -1.5px;
-  padding-right: ${carretSpace};
-  margin-right: ${carretSpace};
-  border-right: 1px solid #fff;
-  font-weight: 500;
-  ${scale(1 / 3)}
-`;
-
-const TitleExpanded = styled.span`
-  font-size: 12px;
-  font-weight: 300;
-  line-height: 10px;
-`;
 
 const Link = styled.a`
   ${flexContainer}
@@ -91,12 +76,7 @@ export default () => {
     <Container>
       <FixedContainer>
         <Link href="/">
-          <Title>FS</Title>
-          <TitleExpanded>
-            full
-            <br />
-            stack
-          </TitleExpanded>
+          <Logo />
         </Link>
         <FlexContainer>
           <SocialLink url={`https://facebook.com/${social.facebook}`} icon={<FaFacebook />} />
