@@ -40,8 +40,8 @@
     "react-icons": "^3.8.0",
     "react-live": "^2.2.0",
     "react-typography": "^0.16.13",
-    "typeface-playfair-display": "^0.0.72",
-    "typeface-source-sans-pro": "^0.0.75",
+    "typeface-ubuntu": "^0.0.65",
+    "typeface-ubuntu-mono": "^0.0.72",
     "typography": "^0.16.17",
     "typography-theme-wordpress-2016": "^0.16.19"
   },

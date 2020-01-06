@@ -1,6 +1,6 @@
 // custom typefaces
-import 'typeface-playfair-display';
-import 'typeface-source-sans-pro';
+import 'typeface-ubuntu';
+import 'typeface-ubuntu-mono';
 
 import { wrapRootElement as wrap } from './wrap-root-element';
 

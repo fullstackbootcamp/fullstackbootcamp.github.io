@@ -3,8 +3,8 @@ import Typography from 'typography';
 const typography = new Typography({
   baseFontSize: '18px',
   baseLineHeight: 1.65,
-  headerFontFamily: ['Playfair Display', 'serif'],
-  bodyFontFamily: ['Source Sans Pro', 'sans-serif'],
+  headerFontFamily: ['Ubuntu', 'serif'],
+  bodyFontFamily: ['Ubuntu Mono', 'monospace'],
   overrideStyles: () => ({
     a: {
       color: 'black',
