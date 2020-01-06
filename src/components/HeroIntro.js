@@ -1,4 +1,6 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
+import Image from 'gatsby-image';
 import styled from '@emotion/styled';
 import { rhythm, scale } from '../utils/typography';
 import { Hero, Lead } from './typo';
@@ -24,17 +26,33 @@ const P = styled.p`
   max-width: 500px;
 `;
 
-export default () => (
-  <HeroContainer>
-    <Hero color="white">FullStack Bootcamp</Hero>
-    <Divider />
-    <P>
-      We are offering a free coding bootcamp.
-      <br />
-      What are you waiting for?
-    </P>
-    <Lead color="white">
-      Reserve a slot now!
-    </Lead>
-  </HeroContainer>
-);
+const RedText = styled.span`
+  color: #cc0000;
+`;
+
+export default () => {
+  const query = useStaticQuery(graphql`
+    query {
+      logo: file(absolutePath: { regex: "/fullstack_icon.png/" }) {
+        childImageSharp {
+          fixed(height: 100) {
+            ...GatsbyImageSharpFixed
+          }
+        }
+      }
+    }
+  `);
+
+  return (
+    <HeroContainer>
+      <Image fixed={query.logo.childImageSharp.fixed} />
+      <Divider />
+      <P>
+        FullStack Bootcamp is offering a <RedText>free</RedText> coding bootcamp.
+        <br />
+        What are you waiting for?
+      </P>
+      <Lead color="white">Reserve a slot now!</Lead>
+    </HeroContainer>
+  );
+};

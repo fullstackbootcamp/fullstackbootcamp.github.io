@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 
 import { rhythm, scale } from '../utils/typography';
+import Form from './Form';
 
 class Layout extends React.Component {
   render() {
@@ -25,6 +26,7 @@ class Layout extends React.Component {
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </footer>
         </div>
+        <Form />
       </>
     );
   }

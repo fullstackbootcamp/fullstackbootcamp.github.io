@@ -5,7 +5,7 @@ import Image from 'gatsby-image';
 export default () => {
   const query = useStaticQuery(graphql`
     query {
-      logo: file(absolutePath: {regex: "/logo_horizontal.png/"}) {
+      logo: file(absolutePath: { regex: "/logo_horizontal.png/" }) {
         childImageSharp {
           fixed(height: 30) {
             ...GatsbyImageSharpFixed
@@ -16,4 +16,4 @@ export default () => {
   `);
 
   return <Image fixed={query.logo.childImageSharp.fixed} alt="FullStack Bootcamp Logo" />;
-}
+};
