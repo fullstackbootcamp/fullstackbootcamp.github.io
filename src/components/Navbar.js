@@ -2,7 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from '@emotion/styled';
 import { rhythm, scale } from '../utils/typography';
-import { FaTwitter, FaInstagram, FaGithub } from 'react-icons/fa';
+import { FaTwitter, FaFacebook } from 'react-icons/fa';
 
 const Container = styled.div`
   height: 45px;
@@ -74,8 +74,7 @@ export default () => {
           author
           social {
             twitter
-            instagram
-            github
+            facebook
           }
         }
       }
@@ -92,17 +91,16 @@ export default () => {
     <Container>
       <FixedContainer>
         <Link href="/">
-          <Title>MD</Title>
+          <Title>FS</Title>
           <TitleExpanded>
-            marc
+            full
             <br />
-            dagatan
+            stack
           </TitleExpanded>
         </Link>
         <FlexContainer>
+          <SocialLink url={`https://facebook.com/${social.facebook}`} icon={<FaFacebook />} />
           <SocialLink url={`https://twitter.com/${social.twitter}`} icon={<FaTwitter />} />
-          <SocialLink url={`https://instagram.com/${social.instagram}`} icon={<FaInstagram />} />
-          <SocialLink url={`https://github.com/${social.github}`} icon={<FaGithub />} />
         </FlexContainer>
       </FixedContainer>
     </Container>

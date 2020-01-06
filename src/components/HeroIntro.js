@@ -26,12 +26,15 @@ const P = styled.p`
 
 export default () => (
   <HeroContainer>
-    <Hero color="white">Marc Dagatan</Hero>
-    <Lead color="white">Developer, Nerd, Father</Lead>
+    <Hero color="white">FullStack Bootcamp</Hero>
     <Divider />
     <P>
-      A Ruby on Rails engineer and React JS/Native evangelist.
-      <br /> CTO, FullSuite
+      We are offering a free coding bootcamp.
+      <br />
+      What are you waiting for?
     </P>
+    <Lead color="white">
+      Reserve a slot now!
+    </Lead>
   </HeroContainer>
 );

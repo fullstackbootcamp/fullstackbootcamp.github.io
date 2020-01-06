@@ -1,13 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `Marc Dagatan`,
+    title: `FullStack`,
     author: `Marc Dagatan`,
-    description: `An extension of the gatsby starter blog, with support for MDX`,
+    description: `FullStack Bootcamp marketing website`,
     siteUrl: `https://gatsby-starter-blog-mdx-demo.netlify.com/`,
     social: {
-      twitter: `marcdagatan`,
-      github: `marcdagatan`,
-      instagram: `marcdagatan`,
+      facebook: `fullstackbootcamp`,
+      twitter: `fullstackbootcamp`,
     },
   },
   plugins: [
