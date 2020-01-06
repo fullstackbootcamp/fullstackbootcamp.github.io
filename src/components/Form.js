@@ -3,11 +3,10 @@ import styled from '@emotion/styled';
 import { rhythm, scale } from '../utils/typography';
 
 const Container = styled.div`
-  position: fixed;
   top: 45px;
   bottom: 0;
   right: 0;
-  width: 50vw;
+  width: 40vw;
   background: #000;
   color: #fff;
   padding-left: ${rhythm(1)};

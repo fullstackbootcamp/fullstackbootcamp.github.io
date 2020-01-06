@@ -39,6 +39,8 @@
     "react-helmet": "^5.2.0",
     "react-icons": "^3.8.0",
     "react-live": "^2.2.0",
+    "react-typist": "^2.0.5",
+    "react-typist-loop": "^0.0.5",
     "react-typography": "^0.16.13",
     "typeface-ubuntu": "^0.0.65",
     "typeface-ubuntu-mono": "^0.0.72",

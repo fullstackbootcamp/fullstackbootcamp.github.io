@@ -10884,6 +10884,18 @@ react-simple-code-editor@^0.10.0:
   resolved "https://registry.yarnpkg.com/react-simple-code-editor/-/react-simple-code-editor-0.10.0.tgz#73e7ac550a928069715482aeb33ccba36efe2373"
   integrity sha512-bL5W5mAxSW6+cLwqqVWY47Silqgy2DKDTR4hDBrLrUqC5BXc29YVx17l2IZk5v36VcDEq1Bszu2oHm1qBwKqBA==
 
+react-typist-loop@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/react-typist-loop/-/react-typist-loop-0.0.5.tgz#eb5ae82ba001557afb72236e3187d6dc10f0c1c0"
+  integrity sha512-CyeQjuKUoe/cu1ga+JBZWq0G4PKa5ALNVxJ2k4QK9OGFBBBkOmE0dRpY/NnXUbVwlfyPGfxIcjGFLJb3QjPHFg==
+
+react-typist@^2.0.5:
+  version "2.0.5"
+  resolved "https://registry.yarnpkg.com/react-typist/-/react-typist-2.0.5.tgz#9830395a73a03e6368e1392ecb98edaa3a648e44"
+  integrity sha512-iZCkeqeegO0TlkTMiH2JD1tvMtY9RrXkRylnAI6m8aCVAUUwNzoWTVF7CKLij6THeOMcUDCznLDDvNp55s+YZA==
+  dependencies:
+    prop-types "^15.5.10"
+
 react-typography@^0.16.13:
   version "0.16.19"
   resolved "https://registry.yarnpkg.com/react-typography/-/react-typography-0.16.19.tgz#5736b47961dcf6b9605b6fa38d41980db2588e28"

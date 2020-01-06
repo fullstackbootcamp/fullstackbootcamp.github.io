@@ -1,5 +1,5 @@
 import React from 'react';
-import { useStaticQuery, graphql } from 'gatsby';
+import { useStaticQuery, graphql, Link } from 'gatsby';
 import styled from '@emotion/styled';
 import { FaTwitter, FaFacebook } from 'react-icons/fa';
 
@@ -12,8 +12,6 @@ const Container = styled.div`
 
 const flexContainer = `
   display: flex;
-  align-items: center;
-  justify-content: center;
   align-items: center;
   justify-content: center;
 `;
@@ -35,7 +33,7 @@ const FixedContainer = styled.div`
 
 const carretSpace = rhythm(1 / 5);
 
-const Link = styled.a`
+const StyledLink = styled.a`
   ${flexContainer}
   text-decoration: none;
   color: #fff;
@@ -46,9 +44,9 @@ const FlexContainer = styled.div`
 `;
 
 const SocialLink = ({ url, icon }) => (
-  <Link href={url} target="_blank" style={{ marginLeft: rhythm(1 / 5) }}>
+  <StyledLink href={url} target="_blank" style={{ marginLeft: rhythm(1 / 5) }}>
     {icon}
-  </Link>
+  </StyledLink>
 );
 
 export default () => {
@@ -75,7 +73,7 @@ export default () => {
   return (
     <Container>
       <FixedContainer>
-        <Link href="/">
+        <Link href="/" style={{ display: 'flex', alignItems: 'center' }}>
           <Logo />
         </Link>
         <FlexContainer>
