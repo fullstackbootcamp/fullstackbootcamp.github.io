@@ -9,6 +9,9 @@ const typography = new Typography({
     a: {
       color: 'black',
     },
+    td: {
+      fontWeight: 400,
+    },
   }),
 });
 
