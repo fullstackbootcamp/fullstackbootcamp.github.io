@@ -11,6 +11,7 @@ import { rhythm } from '../utils/typography';
 import Section2 from '../components/homeSections/Section2';
 import Section3 from '../components/homeSections/Section3';
 import PoweredBy from '../components/homeSections/PoweredBy';
+import TopicsOverview from '../components/homeSections/TopicsOverview';
 import ContactSection from '../components/ContactSection';
 
 class BlogIndex extends React.Component {
@@ -25,6 +26,7 @@ class BlogIndex extends React.Component {
         <HeroIntro />
         <Section2 />
         <Section3 />
+        <TopicsOverview />
         <PoweredBy />
         <ContactSection />
         <Layout location={this.props.location} title={siteTitle}>

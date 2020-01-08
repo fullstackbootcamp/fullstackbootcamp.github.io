@@ -17,3 +17,13 @@ export const Container = styled.div`
   background-color: ${props => props.backgroundColor || '#fff'};
   color: ${props => props.color || '#000'};
 `;
+
+export const FluidContainer = styled.div`
+  position: relative;
+  width: 100%;
+  padding: ${rhythm(2)} ${rhythm(1)};
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: ${props => props.backgroundColor || '#fff'};
+  color: ${props => props.color || '#000'};
+`;
