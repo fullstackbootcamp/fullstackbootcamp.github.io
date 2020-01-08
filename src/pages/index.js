@@ -12,6 +12,7 @@ import Section2 from '../components/homeSections/Section2';
 import Section3 from '../components/homeSections/Section3';
 import PoweredBy from '../components/homeSections/PoweredBy';
 import TopicsOverview from '../components/homeSections/TopicsOverview';
+import BootcampDetails from '../components/homeSections/BootcampDetails';
 import ContactSection from '../components/ContactSection';
 
 class BlogIndex extends React.Component {
@@ -22,15 +23,16 @@ class BlogIndex extends React.Component {
 
     return (
       <>
+        <SEO title="FullStack Bootcamp" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
         <Navbar />
         <HeroIntro />
         <Section2 />
         <Section3 />
         <TopicsOverview />
+        <BootcampDetails />
         <PoweredBy />
         <ContactSection />
         <Layout location={this.props.location} title={siteTitle}>
-          <SEO title="All posts" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug;
             return (
