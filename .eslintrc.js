@@ -6,7 +6,9 @@ module.exports = {
   plugins: ['react'],
   globals: {
     graphql: false,
+    localStorage: true,
   },
+  parser: 'babel-eslint',
   parserOptions: {
     sourceType: 'module',
     ecmaFeatures: {

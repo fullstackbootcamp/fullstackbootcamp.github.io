@@ -82,7 +82,7 @@ export default () => {
           <br />
           What are you waiting for?
         </P>
-        <Lead color="white">Reserve a slot now!</Lead>
+        <Lead color="white">Apply now!</Lead>
       </Panel>
       <Panel>
         <Form />
