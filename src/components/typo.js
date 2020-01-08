@@ -32,5 +32,5 @@ export const WhiteText = styled.span`
 `;
 
 export const RedText = styled.span`
-  color: #330000;
+  color: #cc0000;
 `;

@@ -10,6 +10,8 @@ import { rhythm } from '../utils/typography';
 
 import Section2 from '../components/homeSections/Section2';
 import Section3 from '../components/homeSections/Section3';
+import PoweredBy from '../components/homeSections/PoweredBy';
+import ContactSection from '../components/ContactSection';
 
 class BlogIndex extends React.Component {
   render() {
@@ -23,6 +25,8 @@ class BlogIndex extends React.Component {
         <HeroIntro />
         <Section2 />
         <Section3 />
+        <PoweredBy />
+        <ContactSection />
         <Layout location={this.props.location} title={siteTitle}>
           <SEO title="All posts" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
           {posts.map(({ node }) => {

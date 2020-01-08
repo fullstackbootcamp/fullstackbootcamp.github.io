@@ -5,20 +5,7 @@ import styled from '@emotion/styled';
 
 import { rhythm, scale } from '../../utils/typography';
 import { SectionHeader, BlackText, WhiteText } from '../typo';
-
-const Container = styled.div`
-  background: #cc0000;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-  margin: 0;
-  padding: ${rhythm(1)};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-flow: column nowrap;
-`;
+import { Container } from '../Components';
 
 const AbsoluteContainer = styled.div`
   color: #fff;
@@ -75,7 +62,7 @@ export default () => {
   `);
 
   return (
-    <Container>
+    <Container backgroundColor="#cc0000" color="#fff">
       <SectionHeader color="#fff">
         What you <BlackText>get</BlackText>.
       </SectionHeader>
