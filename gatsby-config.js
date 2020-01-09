@@ -5,8 +5,8 @@ module.exports = {
     description: `FullStack Bootcamp marketing website`,
     siteUrl: `https://gatsby-starter-blog-mdx-demo.netlify.com/`,
     social: {
-      facebook: `fullstackbootcamp`,
-      twitter: `fullstackbootcamp`,
+      facebook: `https://fb.com/BootCampFullStack`,
+      linkedin: `https://linkedin.com/company/campfullstack`,
     },
   },
   plugins: [

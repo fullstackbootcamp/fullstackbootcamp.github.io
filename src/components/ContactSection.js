@@ -20,11 +20,11 @@ const Link = styled.a`
 
 const curly = `
   position: absolute;
-  font-size: 48rem;
+  font-size: 40rem;
   z-index: 0;
   top: 50%;
   transform: translateY(-56%);
-  line-height: 48rem;
+  line-height: 40rem;
   -webkit-text-stroke: 2px white;
   color: #000;
 `;

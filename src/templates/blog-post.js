@@ -1,12 +1,30 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import styled from '@emotion/styled';
 
+import { rhythm, scale } from '../utils/typography';
 import Bio from '../components/Bio';
 import Layout from '../components/Layout';
 import SEO from '../components/seo';
 import Navbar from '../components/Navbar';
-import { rhythm, scale } from '../utils/typography';
+import { RedText } from '../components/typo';
+
+const Title = styled.h1`
+  width: 100%;
+  text-align: center;
+  margin-bottom: ${rhythm(0.3)};
+`;
+
+const Byline = styled.p`
+  text-align: center;
+  color: #cc0000;
+`;
+
+const Hr = styled.div`
+  border-bottom: 3px solid #cc0000;
+  margin: ${rhythm(1)} 0;
+`;
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -20,23 +38,13 @@ class BlogPostTemplate extends React.Component {
         <Navbar />
         <Layout location={this.props.location} title={siteTitle}>
           <SEO title={post.frontmatter.title} description={post.excerpt} />
-          <h1>{post.frontmatter.title}</h1>
-          <p
-            style={{
-              ...scale(-1 / 5),
-              display: `block`,
-              marginBottom: rhythm(1),
-              marginTop: rhythm(-1),
-            }}
-          >
-            {post.frontmatter.date}
-          </p>
+          <Title>
+            {post.frontmatter.title}
+            <RedText>.</RedText>
+          </Title>
+          <Byline>{post.frontmatter.date}</Byline>
           <MDXRenderer>{post.body}</MDXRenderer>
-          <hr
-            style={{
-              marginBottom: rhythm(1),
-            }}
-          />
+          <Hr />
           <Bio />
 
           <ul

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql, Link } from 'gatsby';
 import styled from '@emotion/styled';
-import { FaTwitter, FaFacebook } from 'react-icons/fa';
+import { FaLinkedin, FaFacebook } from 'react-icons/fa';
 
 import { rhythm, scale } from '../utils/typography';
 import Logo from './Logo';
@@ -56,7 +56,7 @@ export default () => {
         siteMetadata {
           author
           social {
-            twitter
+            linkedin
             facebook
           }
         }
@@ -77,8 +77,8 @@ export default () => {
           <Logo />
         </Link>
         <FlexContainer>
-          <SocialLink url={`https://facebook.com/${social.facebook}`} icon={<FaFacebook />} />
-          <SocialLink url={`https://twitter.com/${social.twitter}`} icon={<FaTwitter />} />
+          <SocialLink url={social.facebook} icon={<FaFacebook />} />
+          <SocialLink url={social.linkedin} icon={<FaLinkedin />} />
         </FlexContainer>
       </FixedContainer>
     </Container>
