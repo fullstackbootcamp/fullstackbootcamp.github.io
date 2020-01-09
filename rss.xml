@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby RSS feed]]></title><description><![CDATA[FullStack Bootcamp website]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 09 Jan 2020 05:35:38 GMT</lastBuildDate><item><title><![CDATA[Why Ruby on Rails and React JS]]></title><link>https://fullstackbootcamp.github.io/why-ruby-on-rails-and-react/</link><guid isPermaLink="false">https://fullstackbootcamp.github.io/why-ruby-on-rails-and-react/</guid><pubDate>Thu, 09 Jan 2020 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby RSS feed]]></title><description><![CDATA[FullStack Bootcamp website]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 09 Jan 2020 09:23:36 GMT</lastBuildDate><item><title><![CDATA[Why Ruby on Rails and React JS]]></title><link>https://fullstackbootcamp.github.io/why-ruby-on-rails-and-react/</link><guid isPermaLink="false">https://fullstackbootcamp.github.io/why-ruby-on-rails-and-react/</guid><pubDate>Thu, 09 Jan 2020 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
@@ -29,100 +29,35 @@ return function MDXContent(_ref) {
   return mdx(MDXLayout, _extends({}, layoutProps, props, {
     components: components,
     mdxType: &quot;MDXLayout&quot;
-  }), mdx(&quot;p&quot;, null, &quot;Hello world&quot;));
-}
-;
-MDXContent.isMDXComponent = true;</content:encoded></item><item><title><![CDATA[Hello World]]></title><link>https://fullstackbootcamp.github.io/hello-world/</link><guid isPermaLink="false">https://fullstackbootcamp.github.io/hello-world/</guid><pubDate>Fri, 01 May 2015 22:12:03 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
-
-function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i &lt; sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; target[key] = source[key]; } return target; }
-
-/* @jsx mdx */
-var _frontmatter = {
-  &quot;title&quot;: &quot;Hello World&quot;,
-  &quot;date&quot;: &quot;2015-05-01T22:12:03.284Z&quot;,
-  &quot;publish&quot;: false
-};
-
-var makeShortcode = function makeShortcode(name) {
-  return function MDXDefaultShortcode(props) {
-    console.warn(&quot;Component &quot; + name + &quot; was not imported, exported, or provided by MDXProvider as global scope&quot;);
-    return mdx(&quot;div&quot;, props);
-  };
-};
-
-var layoutProps = {
-  _frontmatter: _frontmatter
-};
-var MDXLayout = &quot;wrapper&quot;;
-return function MDXContent(_ref) {
-  var components = _ref.components,
-      props = _objectWithoutProperties(_ref, [&quot;components&quot;]);
-
-  return mdx(MDXLayout, _extends({}, layoutProps, props, {
-    components: components,
-    mdxType: &quot;MDXLayout&quot;
-  }), mdx(&quot;p&quot;, null, &quot;This is my first post on my new fake blog! How exciting!&quot;), mdx(&quot;p&quot;, null, &quot;I\u2019m sure I\u2019ll write a lot more interesting things in the future.&quot;), mdx(&quot;p&quot;, null, &quot;Oh, and here\u2019s a great quote from this Wikipedia on\n&quot;, mdx(&quot;a&quot;, _extends({
+  }), mdx(&quot;p&quot;, null, &quot;There\u2019s a lingering question in the web development community, if Ruby and Ruby on Rails is still relevant. This is a very good question as there are so many web technologies that currently exist and a lot of frameworks gaining steam.&quot;), mdx(&quot;p&quot;, null, &quot;Let me burst that bubble real quick and just say, Ruby on Rails is very much alive and kicking.&quot;), mdx(&quot;p&quot;, null, &quot;A quick Google search about its relevancy today would yield you this answer, and with research about it. Being a Ruby on Rails developer is also one of the highest paying programming jobs there is.&quot;), mdx(&quot;p&quot;, null, &quot;It might not be the &quot;, mdx(&quot;strong&quot;, {
     parentName: &quot;p&quot;
+  }, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;strong&quot;
+  }, &quot;IT&quot;)), &quot; programming language and framework of today &quot;, mdx(&quot;em&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;(Python togehter with the Django Framework holds that crown)&quot;), &quot;, but a lot of popular and up and coming tech startups still rely on good ol\u2019 Ruby on Rails to build their apps.&quot;), mdx(&quot;h2&quot;, null, &quot;But why Ruby on Rails?&quot;), mdx(&quot;p&quot;, null, &quot;I\u2019m listing down here 5 reasons why I\u2019m so inlove with Ruby on Rails.&quot;), mdx(&quot;h4&quot;, null, &quot;1. Ruby is a beautiful programming language&quot;), mdx(&quot;p&quot;, null, &quot;Have you seen a code block of Ruby? It is very easy to read and understand among all programming languages. To illustrate, here are code examples from Ruby, C++, and PHP that all does the same thing.&quot;), mdx(&quot;h5&quot;, null, &quot;Ruby&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
   }, {
-    &quot;href&quot;: &quot;http://en.wikipedia.org/wiki/Salted_duck_egg&quot;
-  }), &quot;salted duck eggs&quot;), &quot;.&quot;), mdx(&quot;blockquote&quot;, null, mdx(&quot;p&quot;, {
+    &quot;className&quot;: &quot;language-rb&quot;
+  }), &quot;for i in (1..10)\n  rno = Random::rand(100) + 1\n\n  msg = case rno\n        when 42\n          \&quot;The ultimate result.\&quot;\n        when 1..10\n          \&quot;Way too small.\&quot;\n        when 11..15, 19, 27\n          \&quot;Sorry, too small\&quot;\n        when 80..99\n          \&quot;Way too large\&quot;\n        when 100\n          \&quot;TOPS\\n Really way too large\&quot;\n        else\n          \&quot;Just wrong\&quot;\n        end\n\n  puts \&quot;Result: #{rno.to_s}: #{msg}\&quot;\nend\n&quot;)), mdx(&quot;h5&quot;, null, &quot;C++&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-cpp&quot;
+  }), &quot;#include &lt;iostream&gt;\n#include &lt;string&gt;\nusing namespace std;\n\nint main(){\n  for( int i = 1; i &lt;= 10; i = i + 1 ) {\n    int rno = rand() % 100 + 1;\n    string msg;\n\n    switch(rno) {\n      case 42:\n        msg = \&quot;The ultimate result.\&quot;;\n        break;\n      case 1 ... 10:\n        msg = \&quot;Way too small.\&quot;;\n        break;\n      case 11 ... 15:\n        msg = \&quot;Sorry, too small\&quot;;\n        break;\n      case 19:\n        msg = \&quot;Sorry, too small\&quot;;\n        break;\n      case 27:\n        msg = \&quot;Sorry, too small\&quot;;\n        break;\n      case 80 ... 99:\n        msg = \&quot;Way too large\&quot;;\n        break;\n      case 100:\n        msg = \&quot;TOPS\\n Really way too large\&quot;;\n        break;\n      default:\n        msg = \&quot;Just wrong\&quot;;\n    }\n\n    cout &lt;&lt; \&quot;Result: \&quot; &lt;&lt; rno &lt;&lt; \&quot;: \&quot; &lt;&lt; msg &lt;&lt; endl;\n  }\n\n  return 0;\n}\n&quot;)), mdx(&quot;h5&quot;, null, &quot;PHP&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-php&quot;
+  }), &quot;&lt;?php\n  for ( $i = 1; $i &lt;= 10; $i++ ) {\n    $rno = rand(1, 100);\n\n    switch($rno) {\n      case 42:\n        $msg = \&quot;The ultimate result.\&quot;;\n        break;\n      case ($rno &gt;= 1 &amp;&amp; $rno &lt;= 10):\n        $msg = \&quot;Way too small.\&quot;;\n        break;\n      case ($rno &gt;= 11 &amp;&amp; $rno &lt;= 15):\n        $msg = \&quot;Sorry, too small\&quot;;\n        break;\n      case 19:\n        $msg = \&quot;Sorry, too small\&quot;;\n        break;\n      case 27:\n        $msg = \&quot;Sorry, too small\&quot;;\n        break;\n      case ($rno &gt;= 80 &amp;&amp; $rno &lt;= 99):\n        $msg = \&quot;Way too large\&quot;;\n        break;\n      case 100:\n        $msg = \&quot;TOPS\\n Really way too large\&quot;;\n        break;\n      default:\n        $msg = \&quot;Just wrong\&quot;;\n    }\n\n    echo nl2br(\&quot;Result: \&quot; . $rno . \&quot;: \&quot; . $msg . \&quot;\\n\&quot;);\n  }\n?&gt;\n&quot;)), mdx(&quot;blockquote&quot;, null, mdx(&quot;p&quot;, {
     parentName: &quot;blockquote&quot;
-  }, &quot;A salted duck egg is a Chinese preserved food product made by soaking duck\neggs in brine, or packing each egg in damp, salted charcoal. In Asian\nsupermarkets, these eggs are sometimes sold covered in a thick layer of salted\ncharcoal paste. The eggs may also be sold with the salted paste removed,\nwrapped in plastic, and vacuum packed. From the salt curing process, the\nsalted duck eggs have a briny aroma, a gelatin-like egg white and a\nfirm-textured, round yolk that is bright orange-red in color.&quot;)), mdx(&quot;p&quot;, null, mdx(&quot;span&quot;, _extends({
+  }, mdx(&quot;em&quot;, {
     parentName: &quot;p&quot;
+  }, &quot;Thanks Richard Praxedes for these code examples!&quot;))), mdx(&quot;p&quot;, null, &quot;With these examples, we can see that you can do the same code from C++ and PHP in Ruy in a very short manner and very readable as well. And it saves a lot of time, having to code less.&quot;), mdx(&quot;h4&quot;, null, &quot;2. RoR is Stable and Mature&quot;), mdx(&quot;p&quot;, null, &quot;Ruby on Rails is old. It\u2019s about 14 years old. But, what that gives you is a very stable and mature platform that rarely breaks out of nowhere.&quot;), mdx(&quot;p&quot;, null, &quot;That age carries with it an excellent eco-system of well-maintained gems &quot;, mdx(&quot;em&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;(plugins)&quot;), &quot;. From authentication, blogging engines, to payment gateway integrations, there are no deficiencies of gems for Ruby.&quot;), mdx(&quot;h4&quot;, null, &quot;3. Strong focus on testing&quot;), mdx(&quot;p&quot;, null, &quot;Out of the box, Ruby on Rails has its own testing suite which you can use. The platform highly encourages you to do testing. But, the most popular testing framework for Ruby on Rails is RSpec which is very robust, self-documenting and really easy to read.&quot;), mdx(&quot;p&quot;, null, &quot;Here\u2019s an example of an RSpec test case.&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
   }, {
-    &quot;className&quot;: &quot;gatsby-resp-image-wrapper&quot;,
-    &quot;style&quot;: {
-      &quot;position&quot;: &quot;relative&quot;,
-      &quot;display&quot;: &quot;block&quot;,
-      &quot;marginLeft&quot;: &quot;auto&quot;,
-      &quot;marginRight&quot;: &quot;auto&quot;,
-      &quot;maxWidth&quot;: &quot;590px&quot;
-    }
-  }), &quot;\n      &quot;, mdx(&quot;a&quot;, _extends({
-    parentName: &quot;span&quot;
-  }, {
-    &quot;className&quot;: &quot;gatsby-resp-image-link&quot;,
-    &quot;href&quot;: &quot;/static/8058f3f26913fea3b6a89a73344fe94a/07827/salty_egg.jpg&quot;,
-    &quot;style&quot;: {
-      &quot;display&quot;: &quot;block&quot;
-    },
-    &quot;target&quot;: &quot;_blank&quot;,
-    &quot;rel&quot;: [&quot;noopener&quot;]
-  }), &quot;\n    &quot;, mdx(&quot;span&quot;, _extends({
-    parentName: &quot;a&quot;
-  }, {
-    &quot;className&quot;: &quot;gatsby-resp-image-background-image&quot;,
-    &quot;style&quot;: {
-      &quot;paddingBottom&quot;: &quot;75%&quot;,
-      &quot;position&quot;: &quot;relative&quot;,
-      &quot;bottom&quot;: &quot;0&quot;,
-      &quot;left&quot;: &quot;0&quot;,
-      &quot;backgroundImage&quot;: &quot;url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAMB/8QAFwEAAwEAAAAAAAAAAAAAAAAAAAEEBf/aAAwDAQACEAMQAAABgik0dXC//8QAGRABAAMBAQAAAAAAAAAAAAAAAQACEhEy/9oACAEBAAEFAkqW2DlnRj73yf/EABcRAQADAAAAAAAAAAAAAAAAAAAREkH/2gAIAQMBAT8B1WX/xAAWEQEBAQAAAAAAAAAAAAAAAAAAEQL/2gAIAQIBAT8Bi6f/xAAbEAABBAMAAAAAAAAAAAAAAAAAAQIRISIxMv/aAAgBAQAGPwK9GNocyS8hCj//xAAbEAADAQADAQAAAAAAAAAAAAABESEAMUGBof/aAAgBAQABPyGxNMfrLHmCDZmAzzvJJDjEQCHv/9oADAMBAAIAAwAAABDIL//EABYRAQEBAAAAAAAAAAAAAAAAAAERAP/aAAgBAwEBPxARhylZv//EABgRAAIDAAAAAAAAAAAAAAAAAAABESFR/9oACAECAQE/EFoktI//xAAdEAEBAAICAwEAAAAAAAAAAAABEQAxIWFBcYHh/9oACAEBAAE/EEbMLQ0fMHDVaPIXyI4pk4JUnWacNCtO8ojDE9TGIYES7/Jn/9k=&apos;)&quot;,
-      &quot;backgroundSize&quot;: &quot;cover&quot;,
-      &quot;display&quot;: &quot;block&quot;
-    }
-  })), &quot;\n  &quot;, mdx(&quot;img&quot;, _extends({
-    parentName: &quot;a&quot;
-  }, {
-    &quot;className&quot;: &quot;gatsby-resp-image-image&quot;,
-    &quot;alt&quot;: &quot;Chinese Salty Egg&quot;,
-    &quot;title&quot;: &quot;Chinese Salty Egg&quot;,
-    &quot;src&quot;: &quot;/static/8058f3f26913fea3b6a89a73344fe94a/88218/salty_egg.jpg&quot;,
-    &quot;srcSet&quot;: [&quot;/static/8058f3f26913fea3b6a89a73344fe94a/7237a/salty_egg.jpg 148w&quot;, &quot;/static/8058f3f26913fea3b6a89a73344fe94a/0cfdf/salty_egg.jpg 295w&quot;, &quot;/static/8058f3f26913fea3b6a89a73344fe94a/88218/salty_egg.jpg 590w&quot;, &quot;/static/8058f3f26913fea3b6a89a73344fe94a/77d57/salty_egg.jpg 885w&quot;, &quot;/static/8058f3f26913fea3b6a89a73344fe94a/5a917/salty_egg.jpg 1180w&quot;, &quot;/static/8058f3f26913fea3b6a89a73344fe94a/07827/salty_egg.jpg 2048w&quot;],
-    &quot;sizes&quot;: &quot;(max-width: 590px) 100vw, 590px&quot;,
-    &quot;style&quot;: {
-      &quot;width&quot;: &quot;100%&quot;,
-      &quot;height&quot;: &quot;100%&quot;,
-      &quot;margin&quot;: &quot;0&quot;,
-      &quot;verticalAlign&quot;: &quot;middle&quot;,
-      &quot;position&quot;: &quot;absolute&quot;,
-      &quot;top&quot;: &quot;0&quot;,
-      &quot;left&quot;: &quot;0&quot;
-    },
-    &quot;loading&quot;: &quot;lazy&quot;
-  })), &quot;\n  &quot;), &quot;\n    &quot;)));
+    &quot;className&quot;: &quot;language-ruby&quot;
+  }), &quot;  describe &apos;#calc&apos; do\n    it &apos;returns a value&apos; do\n      result = subject.calc &apos;5 x 5&apos;\n\n      expect(result).to eq 25\n    end\n  end\n&quot;)), mdx(&quot;p&quot;, null, &quot;I think even non-coders would understand what this is testing out.&quot;), mdx(&quot;h4&quot;, null, &quot;4. Convention over configuration&quot;), mdx(&quot;p&quot;, null, &quot;Because the Ruby community values convention over configuration, moving from project to project is very easy because everyone follows the same guidelines and standards.&quot;), mdx(&quot;p&quot;, null, &quot;Also, taking over a Ruby on Rails project is easier for a RoR developer, given that the previous developer followed the community coding conventions.&quot;), mdx(&quot;h4&quot;, null, &quot;5. Community&quot;), mdx(&quot;p&quot;, null, &quot;Even though not as large as others, the Ruby community is one of the most active. There are also thousands of contributors maintaining the framework itself so it\u2019ll live longer than the others.&quot;), mdx(&quot;p&quot;, null, &quot;Also, if you\u2019re trying to look for answers, you will find the documentation of Ruby on Rails very detailed, and organized. Probably one of the better documentations for a platform that you will see.&quot;), mdx(&quot;hr&quot;, null), mdx(&quot;p&quot;, null, &quot;With that said, there are more reasons to love Ruby on Rails, and reasons to hate on it as well. I\u2019ll probably enumerate cons in another post.&quot;), mdx(&quot;h2&quot;, null, &quot;Hello from React!&quot;), mdx(&quot;p&quot;, null, &quot;Now that we\u2019ve discussed why Ruby on Rails, what is React JS anyway?&quot;), mdx(&quot;p&quot;, null, &quot;In a nutshell: React JS is a javascript library for creating interfaces.&quot;), mdx(&quot;p&quot;, null, &quot;Other javascript libraries similar to React are Angular, Vue, and Ember. Each of these libraries have their own advantages but I find React having the edge over the other.&quot;));
 }
 ;
 MDXContent.isMDXComponent = true;</content:encoded></item></channel></rss>
