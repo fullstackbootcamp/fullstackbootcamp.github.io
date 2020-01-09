@@ -153,7 +153,7 @@ class Form extends Component {
       );
 
       if (status === 200) {
-        await localStorage.setItem('name', this.state.fullname);
+        (await typeof window) !== 'undefined' && window.localStorage.setItem('name', this.state.fullname);
         await this.setState({ submitting: false });
       }
     } catch ({ response: { data } }) {
@@ -173,7 +173,7 @@ class Form extends Component {
     );
 
   render = () => {
-    let name = localStorage.getItem('name');
+    let name = typeof window !== 'undefined' && window.localStorage.getItem('name');
 
     if (name) {
       return (
@@ -187,7 +187,9 @@ class Form extends Component {
             <br />
             you're selected.
           </SuccessMessage>
-          <SignupAgainBtn onClick={() => localStorage.removeItem('name')}>Sign up another candidate</SignupAgainBtn>
+          <SignupAgainBtn onClick={() => typeof window !== 'undefined' && window.localStorage.removeItem('name')}>
+            Sign up another candidate
+          </SignupAgainBtn>
         </>
       );
     }
