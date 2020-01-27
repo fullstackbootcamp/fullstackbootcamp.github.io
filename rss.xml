@@ -1,4 +1,618 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby RSS feed]]></title><description><![CDATA[FullStack Bootcamp website]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 13 Jan 2020 04:23:10 GMT</lastBuildDate><item><title><![CDATA[Why Ruby on Rails and React JS]]></title><link>https://fullstackbootcamp.github.io/why-ruby-on-rails-and-react/</link><guid isPermaLink="false">https://fullstackbootcamp.github.io/why-ruby-on-rails-and-react/</guid><pubDate>Thu, 09 Jan 2020 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby RSS feed]]></title><description><![CDATA[FullStack Bootcamp website]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 27 Jan 2020 09:13:16 GMT</lastBuildDate><item><title><![CDATA[Setting up your Ruby on Rails dev environment with Docker: MacOS]]></title><link>https://fullstackbootcamp.github.io/setup-for-osx/</link><guid isPermaLink="false">https://fullstackbootcamp.github.io/setup-for-osx/</guid><pubDate>Mon, 27 Jan 2020 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i &lt; sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; target[key] = source[key]; } return target; }
+
+/* @jsx mdx */
+var _frontmatter = {
+  &quot;title&quot;: &quot;Setting up your Ruby on Rails dev environment with Docker: MacOS&quot;,
+  &quot;date&quot;: &quot;2020-01-27&quot;,
+  &quot;publish&quot;: true
+};
+
+var makeShortcode = function makeShortcode(name) {
+  return function MDXDefaultShortcode(props) {
+    console.warn(&quot;Component &quot; + name + &quot; was not imported, exported, or provided by MDXProvider as global scope&quot;);
+    return mdx(&quot;div&quot;, props);
+  };
+};
+
+var layoutProps = {
+  _frontmatter: _frontmatter
+};
+var MDXLayout = &quot;wrapper&quot;;
+return function MDXContent(_ref) {
+  var components = _ref.components,
+      props = _objectWithoutProperties(_ref, [&quot;components&quot;]);
+
+  return mdx(MDXLayout, _extends({}, layoutProps, props, {
+    components: components,
+    mdxType: &quot;MDXLayout&quot;
+  }), mdx(&quot;p&quot;, null, &quot;So, you want to start developing with Ruby on Rails and React JS in your MacOS machine? Let me give you a step-by-step guide on how you can setup your machine.&quot;), mdx(&quot;p&quot;, null, &quot;What are we installing?&quot;), mdx(&quot;ul&quot;, null, mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;Xcode&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;Homebrew&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;Node and npm, with NVM&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;Yarn&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;Git&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;Docker&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;Ruby, with RVM&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;Foreman&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;bundle&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;Rails, with React&quot;)), mdx(&quot;p&quot;, null, &quot;(We won\u2019t be setting up React individually. We\u2019ll use React within a Rails install.)&quot;), mdx(&quot;h2&quot;, null, &quot;Simple Rails Setup with Postgresql&quot;), mdx(&quot;p&quot;, null, &quot;You can go the usual route of setting up Rails, Postgresql, without using Docker. There are already many resources out there how to do this. Here\u2019s a list of some that you can follow:&quot;), mdx(&quot;ul&quot;, null, mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-macos&quot;
+  }), &quot;https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-macos&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://gorails.com/setup/osx/10.15-catalina&quot;
+  }), &quot;https://gorails.com/setup/osx/10.15-catalina&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://guides.rubyonrails.org/development_dependencies_install.html&quot;
+  }), &quot;https://guides.rubyonrails.org/development_dependencies_install.html&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://coderwall.com/p/dovmsg/how-to-make-your-rails-app-start-talking-to-a-postgres-database&quot;
+  }), &quot;https://coderwall.com/p/dovmsg/how-to-make-your-rails-app-start-talking-to-a-postgres-database&quot;))), mdx(&quot;p&quot;, null, &quot;Whether you\u2019ll be joining or following FullStack bootcamp, you can use these guides if you want a simple Rails install with Postgresql.&quot;), mdx(&quot;h2&quot;, null, &quot;Step 1. Xcode&quot;), mdx(&quot;p&quot;, null, &quot;If you haven\u2019t installed Xcode yet, this is the first step you need to do.&quot;), mdx(&quot;p&quot;, null, &quot;It\u2019s as easy as going to the &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;App Store&quot;), &quot; and downloading XCode.&quot;), mdx(&quot;p&quot;, null, &quot;Or, in the terminal:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ xcode-select --install\n&quot;)), mdx(&quot;h2&quot;, null, &quot;Step 2: macOS package manager, Homebrew&quot;), mdx(&quot;p&quot;, null, &quot;After installing Xcode, we will download macOS\u2019 package manager, Homebrew.&quot;), mdx(&quot;p&quot;, null, &quot;Open up a terminal and put this in:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ /usr/bin/ruby -e \&quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)\&quot;\n&quot;)), mdx(&quot;p&quot;, null, &quot;Test it out by downloading &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;wget&quot;), &quot;, which we also need.&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ brew install wget\n&quot;)), mdx(&quot;h2&quot;, null, &quot;Step 3: Node JS through NVM&quot;), mdx(&quot;p&quot;, null, &quot;NVM is Node JS\u2019 version manager. With NVM, you can switch Node versions on the fly. It also automatically does some setup steps for you.&quot;), mdx(&quot;p&quot;, null, &quot;Both Ruby on Rails and React JS requires Node Js installed.&quot;), mdx(&quot;p&quot;, null, &quot;Let\u2019s install nvm first:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ brew install nvm\n&quot;)), mdx(&quot;p&quot;, null, &quot;Next, create a directory for nvm:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ mkdir ~/.nvm\n&quot;)), mdx(&quot;p&quot;, null, &quot;We also need to add a few lines to &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;~/.bash_profile&quot;), &quot; to make nvm executable:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ export NVM_DIR=~/.nvm\n$ source $(brew --prefix nvm)/nvm.sh\n&quot;)), mdx(&quot;p&quot;, null, &quot;Running &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;nvm -v&quot;), &quot; should yield you the ff:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;as-MacBook-Pro:fullstack-web marcdagatan$ nvm -v\n\nNode Version Manager (v0.35.1)\n# More info about Node Version Manager\n&quot;)), mdx(&quot;p&quot;, null, &quot;Now that we have NVM set up, let\u2019s install Node v12.14:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ nvm install 12.14\n&quot;)), mdx(&quot;p&quot;, null, &quot;To see installed Node versions:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ nvm ls\n&quot;)), mdx(&quot;p&quot;, null, &quot;If you have multiple Node versions installed, you can specify which version to use by doing:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ nvm use 12.14\n&quot;)), mdx(&quot;h2&quot;, null, &quot;Step 4: Yarn&quot;), mdx(&quot;p&quot;, null, &quot;Node already has its own package manager with &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;npm&quot;), &quot;, but we prefer using &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;yarn&quot;), &quot; as it compiles way faster than &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;npm&quot;), &quot;.&quot;), mdx(&quot;p&quot;, null, &quot;We\u2019ll again use brew to install Yarn:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ brew install yarn\n&quot;)), mdx(&quot;p&quot;, null, &quot;That\u2019s it! To check for yarn\u2019s successful install:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ yarn -v\n\n# it should yield the version number of Yarn\nas-MacBook-Pro:fullstack-web marcdagatan$ yarn -v\n1.21.1\n&quot;)), mdx(&quot;h2&quot;, null, &quot;Step 5: Install git&quot;), mdx(&quot;p&quot;, null, &quot;Ahh git, the universal version control system of developers. Yes, we will be needing this a lot.&quot;), mdx(&quot;p&quot;, null, &quot;Let\u2019s first install git, again with brew:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ brew install git\n&quot;)), mdx(&quot;p&quot;, null, &quot;After that, let\u2019s setup your git config:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;# set your name\n$ git config --global user.name \&quot;Your Full Name\&quot;\n$ git config --global user.email \&quot;youremail@provider.com\&quot;\n&quot;)), mdx(&quot;h2&quot;, null, &quot;Step 6: Simple database with sqlite&quot;), mdx(&quot;p&quot;, null, &quot;We will start off the bootcamp using sqlite as our database system. But, moving forward, we will be using Postgresql instead. But, we won\u2019t install it the usual way. Scroll down to the bottom to find out how we\u2019ll setup postgresql.&quot;), mdx(&quot;p&quot;, null, &quot;Install sqlite is as easy as:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ brew install sqlite3\n&quot;)), mdx(&quot;h2&quot;, null, &quot;Step 7: Ruby with RVM&quot;), mdx(&quot;p&quot;, null, &quot;Ruby has multiple version managers with RVM, or RBenv. We prefer using RVM as it\u2019s more stable.&quot;), mdx(&quot;p&quot;, null, &quot;Let\u2019s first install gpg with brew:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ brew install gnupg\n&quot;)), mdx(&quot;p&quot;, null, &quot;After that, install the gpg keys:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB\n&quot;)), mdx(&quot;p&quot;, null, &quot;Once done, install RVM with latest stable version of ruby:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {}), &quot;$ \\curl -sSL https://get.rvm.io | bash -s stable --ruby\n&quot;)), mdx(&quot;h2&quot;, null, &quot;Step 8: Install Rails&quot;), mdx(&quot;p&quot;, null, &quot;Now that we have Ruby in our machines, let\u2019s now install Rails. We will be using Rails version 5.2.4 throughout the course of our bootcamp, so we\u2019ll install that version of rails.&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ gem install rails -v 5.2.4\n&quot;)), mdx(&quot;h2&quot;, null, &quot;Step 9: Test your dev environment out!&quot;), mdx(&quot;p&quot;, null, &quot;Whew. That was a lot of steps to take. And now, we\u2019re finally at the end. We want to see if our setup is correct.&quot;), mdx(&quot;p&quot;, null, &quot;Let\u2019s first create a directory for all the apps we will be making:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ mkdir ~/apps\n&quot;)), mdx(&quot;p&quot;, null, &quot;Go to the new directory you\u2019ve just made:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ cd ~/apps\n&quot;)), mdx(&quot;p&quot;, null, &quot;Create a new rails project:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ rails new myapp\n&quot;)), mdx(&quot;p&quot;, null, &quot;Go inside the project:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ cd myapp\n&quot;)), mdx(&quot;p&quot;, null, &quot;Start the project:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ rails server\n\n# for the shorthand way\n$ rails s\n&quot;)), mdx(&quot;p&quot;, null, &quot;On your browser go to: &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;http://localhost:3000&quot;)), mdx(&quot;p&quot;, null, &quot;IF you see this:\n&quot;, mdx(&quot;span&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-wrapper&quot;,
+    &quot;style&quot;: {
+      &quot;position&quot;: &quot;relative&quot;,
+      &quot;display&quot;: &quot;block&quot;,
+      &quot;marginLeft&quot;: &quot;auto&quot;,
+      &quot;marginRight&quot;: &quot;auto&quot;,
+      &quot;maxWidth&quot;: &quot;590px&quot;
+    }
+  }), &quot;\n      &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;span&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-link&quot;,
+    &quot;href&quot;: &quot;/static/8a1746e93f65c5fa8793fc34439ec519/85f73/setup-success.png&quot;,
+    &quot;style&quot;: {
+      &quot;display&quot;: &quot;block&quot;
+    },
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: [&quot;noopener&quot;]
+  }), &quot;\n    &quot;, mdx(&quot;span&quot;, _extends({
+    parentName: &quot;a&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-background-image&quot;,
+    &quot;style&quot;: {
+      &quot;paddingBottom&quot;: &quot;66.01851851851852%&quot;,
+      &quot;position&quot;: &quot;relative&quot;,
+      &quot;bottom&quot;: &quot;0&quot;,
+      &quot;left&quot;: &quot;0&quot;,
+      &quot;backgroundImage&quot;: &quot;url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB1klEQVQ4y4WTUY/SQBSF++N8883Ed1/9F/rkv9jE8KCu6wsxmk0MJqtZF9Bdtoil0iKC7tqWMhS2pUCnn1MQslvAneRmOnfOnDn39oxGbqRpupylJPuaC8Hw8JC42yUJw0Vujfk3Xx/aVrJrwNTzGBeLhKUS+P5/sVsJVwDXdTGbTTq9Hl1FdDEY8N220c/PF3t5/AbhanMFCFV5nlIXBCOGA0EghkqgwHE9wijaqVJbJ9bJ3K2pOiwFJJmqq6yrKpIlfCHg5hktf9OKO5kHJHGbZGIwn5jMoiZJ1FBrU4WFlPFWlVq+3CwtZ31kbBKNLC46TX6a3zBrp3R/NOg7NpOxiZx2lBPmG73U8olUTplGJr/tOo2zL+jld9TeH1D79JbPx0folRPM0zLjwCBNrtY22qEwW0X4v3RqH48xWmWqdoETe49q6xlWq067YWCUK4z8ljp4C2E2ZrMBuvWKN/oj9qp3sJwPqjyotJ9SqN3lZf0BhbN7dJ0D1ZvodsJ4HlJqP2a/cZ+i8RA/tBBhD+PyNV/dfRXPOeo8oe682Go3bbfrU6J4jBj6DMWIOEqXjtnysjb+8k3LpMhU0u/7OH/cxasQYqBM7uL1VXgOwUgonNz6Wv4CzVjjo/w5xGEAAAAASUVORK5CYII=&apos;)&quot;,
+      &quot;backgroundSize&quot;: &quot;cover&quot;,
+      &quot;display&quot;: &quot;block&quot;
+    }
+  })), &quot;\n  &quot;, mdx(&quot;img&quot;, _extends({
+    parentName: &quot;a&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-image&quot;,
+    &quot;alt&quot;: &quot;Rails successful install&quot;,
+    &quot;title&quot;: &quot;Rails successful install&quot;,
+    &quot;src&quot;: &quot;/static/8a1746e93f65c5fa8793fc34439ec519/799d3/setup-success.png&quot;,
+    &quot;srcSet&quot;: [&quot;/static/8a1746e93f65c5fa8793fc34439ec519/00d96/setup-success.png 148w&quot;, &quot;/static/8a1746e93f65c5fa8793fc34439ec519/0b23c/setup-success.png 295w&quot;, &quot;/static/8a1746e93f65c5fa8793fc34439ec519/799d3/setup-success.png 590w&quot;, &quot;/static/8a1746e93f65c5fa8793fc34439ec519/2a3d6/setup-success.png 885w&quot;, &quot;/static/8a1746e93f65c5fa8793fc34439ec519/ae92f/setup-success.png 1180w&quot;, &quot;/static/8a1746e93f65c5fa8793fc34439ec519/85f73/setup-success.png 2160w&quot;],
+    &quot;sizes&quot;: &quot;(max-width: 590px) 100vw, 590px&quot;,
+    &quot;style&quot;: {
+      &quot;width&quot;: &quot;100%&quot;,
+      &quot;height&quot;: &quot;100%&quot;,
+      &quot;margin&quot;: &quot;0&quot;,
+      &quot;verticalAlign&quot;: &quot;middle&quot;,
+      &quot;position&quot;: &quot;absolute&quot;,
+      &quot;top&quot;: &quot;0&quot;,
+      &quot;left&quot;: &quot;0&quot;
+    },
+    &quot;loading&quot;: &quot;lazy&quot;
+  })), &quot;\n  &quot;), &quot;\n    &quot;)), mdx(&quot;h4&quot;, null, &quot;Congrats! You\u2019ve setup everything properly.&quot;), mdx(&quot;h2&quot;, null, &quot;Bootcamp dev environment&quot;), mdx(&quot;p&quot;, null, &quot;TsekAsia\u2019s development team is an avid fan of Docker, and Foreman.&quot;), mdx(&quot;p&quot;, null, &quot;Docker allows use to containerize our development environments, but we won\u2019t use it for that purpose. We will use docker with &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;docker-compose&quot;), &quot; so we won\u2019t have to install and setup other dependencies such as &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;postgresql&quot;), &quot; and &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;redis&quot;), &quot;.&quot;), mdx(&quot;p&quot;, null, &quot;Foreman is a Procfile-based application manager. It allows us to run multiple services all at the same time. We can run, &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;$ rails s&quot;), &quot;, &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;$ docker-compose up&quot;), &quot;, and &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;$ bin/webpack-dev-server start&quot;), &quot; all at the same time, in one terminal window.&quot;), mdx(&quot;p&quot;, null, &quot;We would like to focus more on learning how to use and harness Ruby on Rails with React to its fullest and mitigate the setup process for your development environment. This will also lessen setup time for each individual projects. This would mean, we could focus more on the lessons at hand.&quot;), mdx(&quot;p&quot;, null, mdx(&quot;strong&quot;, {
+    parentName: &quot;p&quot;
+  }, mdx(&quot;em&quot;, {
+    parentName: &quot;strong&quot;
+  }, &quot;(This is also our Engineering team\u2019s development environment. Following these steps would not only give you a leaner development environment, you\u2019ll also know some trade secrets on how to make your life easier.)&quot;))), mdx(&quot;blockquote&quot;, null, mdx(&quot;p&quot;, {
+    parentName: &quot;blockquote&quot;
+  }, mdx(&quot;strong&quot;, {
+    parentName: &quot;p&quot;
+  }, mdx(&quot;em&quot;, {
+    parentName: &quot;strong&quot;
+  }, &quot;If you will be using Docker for your dev environment, please do not install postgresql through, &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;em&quot;
+  }, &quot;$ brew install postgresql&quot;), &quot; as this will conflict with the docker instance of postgresql. Specifically, your machine will prioritize allocation of port 5432 to your local postgreql install.&quot;)))), mdx(&quot;p&quot;, null, &quot;With this, let\u2019s go ahead and set up other development dependencies!&quot;), mdx(&quot;h2&quot;, null, &quot;Docker&quot;), mdx(&quot;p&quot;, null, &quot;Docker already has this guide in their website and it\u2019s comprehensive enough that I don\u2019t need to explain it here. But, Here\u2019s the link to their setup guide for MacOS.&quot;), mdx(&quot;p&quot;, null, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;https://docs.docker.com/docker-for-mac/install/&quot;
+  }), &quot;https://docs.docker.com/docker-for-mac/install/&quot;)), mdx(&quot;p&quot;, null, &quot;We won\u2019t be using Docker with &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;docker-compose&quot;), &quot; up until the latter parts of the Bootcamp, but it\u2019s cool to have this installed already so we won\u2019t need to later on.&quot;), mdx(&quot;h2&quot;, null, &quot;Foreman&quot;), mdx(&quot;p&quot;, null, &quot;We won\u2019t be using foreman up until the middle of the bootcamp, but it\u2019s better to have it installed now.&quot;), mdx(&quot;p&quot;, null, &quot;Install foreman by doing this,&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ gem install foreman\n&quot;)), mdx(&quot;p&quot;, null, &quot;Test it out by going to the rails app a rails app, and create a file in your root directory &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;Procfile&quot;), &quot; with the following contents:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {}), &quot;app: rails s\n&quot;)), mdx(&quot;p&quot;, null, &quot;Once saved, run:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ foreman start\n&quot;)), mdx(&quot;p&quot;, null, &quot;And you\u2019re all good to go!&quot;));
+}
+;
+MDXContent.isMDXComponent = true;</content:encoded></item><item><title><![CDATA[Setting up your Ruby on Rails dev environment with Docker: Ubuntu]]></title><link>https://fullstackbootcamp.github.io/setup-for-ubuntu/</link><guid isPermaLink="false">https://fullstackbootcamp.github.io/setup-for-ubuntu/</guid><pubDate>Mon, 27 Jan 2020 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i &lt; sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; target[key] = source[key]; } return target; }
+
+/* @jsx mdx */
+var _frontmatter = {
+  &quot;title&quot;: &quot;Setting up your Ruby on Rails dev environment with Docker: Ubuntu&quot;,
+  &quot;date&quot;: &quot;2020-01-27&quot;,
+  &quot;publish&quot;: true
+};
+
+var makeShortcode = function makeShortcode(name) {
+  return function MDXDefaultShortcode(props) {
+    console.warn(&quot;Component &quot; + name + &quot; was not imported, exported, or provided by MDXProvider as global scope&quot;);
+    return mdx(&quot;div&quot;, props);
+  };
+};
+
+var layoutProps = {
+  _frontmatter: _frontmatter
+};
+var MDXLayout = &quot;wrapper&quot;;
+return function MDXContent(_ref) {
+  var components = _ref.components,
+      props = _objectWithoutProperties(_ref, [&quot;components&quot;]);
+
+  return mdx(MDXLayout, _extends({}, layoutProps, props, {
+    components: components,
+    mdxType: &quot;MDXLayout&quot;
+  }), mdx(&quot;p&quot;, null, &quot;So, you want to start developing with Ruby on Rails and React JS in your Ubuntu machine? Let me give you a step-by-step guide on how you can setup your machine.&quot;), mdx(&quot;p&quot;, null, &quot;What are we installing?&quot;), mdx(&quot;ul&quot;, null, mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;Node and npm, with NVM&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;Yarn&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;Git&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;Docker&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;Ruby, with RVM&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;Foreman&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;bundle&quot;), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, &quot;Rails, with React&quot;)), mdx(&quot;p&quot;, null, &quot;(We won\u2019t be setting up React individually. We\u2019ll use React within a Rails install.)&quot;), mdx(&quot;h2&quot;, null, &quot;Simple Rails Setup with Postgresql&quot;), mdx(&quot;p&quot;, null, &quot;You can go the usual route of setting up Rails, Postgresql, without using Docker. There are already many resources out there how to do this. Here\u2019s a list of some that you can follow:&quot;), mdx(&quot;ul&quot;, null, mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-macos&quot;
+  }), &quot;https://www.digitalocean.com/community/tutorials/how-to-use-postgresql-with-your-ruby-on-rails-application-on-macos&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://gorails.com/setup/osx/10.15-catalina&quot;
+  }), &quot;https://gorails.com/setup/osx/10.15-catalina&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://guides.rubyonrails.org/development_dependencies_install.html&quot;
+  }), &quot;https://guides.rubyonrails.org/development_dependencies_install.html&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://coderwall.com/p/dovmsg/how-to-make-your-rails-app-start-talking-to-a-postgres-database&quot;
+  }), &quot;https://coderwall.com/p/dovmsg/how-to-make-your-rails-app-start-talking-to-a-postgres-database&quot;))), mdx(&quot;p&quot;, null, &quot;Whether you\u2019ll be joining or following FullStack bootcamp, you can use these guides if you want a simple Rails install with Postgresql.&quot;), mdx(&quot;h2&quot;, null, &quot;Step 1: upgrade all packages&quot;), mdx(&quot;p&quot;, null, &quot;First step is to upgrade and update all packages to the latest versions:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ sudo apt-get upgrade\n&quot;)), mdx(&quot;h2&quot;, null, &quot;Step 3: Node JS through NVM&quot;), mdx(&quot;p&quot;, null, &quot;NVM is Node JS\u2019 version manager. With NVM, you can switch Node versions on the fly. It also automatically does some setup steps for you.&quot;), mdx(&quot;p&quot;, null, &quot;Both Ruby on Rails and React JS requires Node Js installed.&quot;), mdx(&quot;p&quot;, null, &quot;Let\u2019s install nvm by downloading and running the bash script:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash\n&quot;)), mdx(&quot;p&quot;, null, &quot;Oh, and also do this:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ export NVM_DIR=\&quot;$([ -z \&quot;${XDG_CONFIG_HOME-}\&quot; ] &amp;&amp; printf %s \&quot;${HOME}/.nvm\&quot; || printf %s \&quot;${XDG_CONFIG_HOME}/nvm\&quot;)\&quot;\n[ -s \&quot;$NVM_DIR/nvm.sh\&quot; ] &amp;&amp; \\. \&quot;$NVM_DIR/nvm.sh\&quot;\n&quot;)), mdx(&quot;p&quot;, null, mdx(&quot;em&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;note: It\u2019s one whole line.&quot;)), mdx(&quot;p&quot;, null, &quot;Confirm that you have nvm installed:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ nvm -v\n&quot;)), mdx(&quot;p&quot;, null, &quot;Now that we have NVM set up, let\u2019s install Node v12.14:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ nvm install 12.14\n&quot;)), mdx(&quot;p&quot;, null, &quot;To see installed Node versions:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ nvm ls\n&quot;)), mdx(&quot;p&quot;, null, &quot;If you have multiple Node versions installed, you can specify which version to use by doing:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ nvm use 12.14\n&quot;)), mdx(&quot;h2&quot;, null, &quot;Step 4: Yarn&quot;), mdx(&quot;p&quot;, null, &quot;Node already has its own package manager with &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;npm&quot;), &quot;, but we prefer using &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;yarn&quot;), &quot; as it compiles way faster than &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;npm&quot;), &quot;.&quot;), mdx(&quot;p&quot;, null, &quot;We\u2019ll first update our package repository:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -\n$ echo \&quot;deb https://dl.yarnpkg.com/debian/ stable main\&quot; | sudo tee /etc/apt/sources.list.d/yarn.list\n&quot;)), mdx(&quot;p&quot;, null, &quot;Then, install it with &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;apt-get&quot;), &quot;:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ sudo apt update &amp;&amp; sudo apt install yarn\n&quot;)), mdx(&quot;p&quot;, null, &quot;That\u2019s it! To check for yarn\u2019s successful install:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ yarn -v\n\n# it should yield the version number of Yarn\n1.21.1\n&quot;)), mdx(&quot;h2&quot;, null, &quot;Step 5: Install git&quot;), mdx(&quot;p&quot;, null, &quot;Ahh git, the universal version control system of developers. Yes, we will be needing this a lot.&quot;), mdx(&quot;p&quot;, null, &quot;Install git with the package manager:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ sudo apt-get install git\n&quot;)), mdx(&quot;p&quot;, null, &quot;After that, let\u2019s setup your git config:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;# set your name\n$ git config --global user.name \&quot;Your Full Name\&quot;\n$ git config --global user.email \&quot;youremail@provider.com\&quot;\n&quot;)), mdx(&quot;h2&quot;, null, &quot;Step 6: Simple database with sqlite&quot;), mdx(&quot;p&quot;, null, &quot;We will start off the bootcamp using sqlite as our database system. But, moving forward, we will be using Postgresql instead. But, we won\u2019t install it the usual way. Scroll down to the bottom to find out how we\u2019ll setup postgresql.&quot;), mdx(&quot;p&quot;, null, &quot;Install sqlite is as easy as:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ sudo apt-get install sqlite3\n&quot;)), mdx(&quot;h2&quot;, null, &quot;Step 7: Ruby with RVM&quot;), mdx(&quot;p&quot;, null, &quot;Ruby has multiple version managers with RVM, or RBenv. We prefer using RVM as it\u2019s more stable.&quot;), mdx(&quot;p&quot;, null, &quot;Install gnupg with:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ sudo apt-get install gnupg2\n&quot;)), mdx(&quot;p&quot;, null, &quot;After that, install the gpg keys:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB\n&quot;)), mdx(&quot;p&quot;, null, &quot;Once done, install RVM with latest stable version of ruby:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {}), &quot;$ \\curl -sSL https://get.rvm.io | bash -s stable --ruby\n&quot;)), mdx(&quot;h2&quot;, null, &quot;Step 8: Install Rails&quot;), mdx(&quot;p&quot;, null, &quot;Now that we have Ruby in our machines, let\u2019s now install Rails. We will be using Rails version 5.2.4 throughout the course of our bootcamp, so we\u2019ll install that version of rails.&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ gem install rails -v 5.2.4\n&quot;)), mdx(&quot;h2&quot;, null, &quot;Step 9: Test your dev environment out!&quot;), mdx(&quot;p&quot;, null, &quot;Whew. That was a lot of steps to take. And now, we\u2019re finally at the end. We want to see if our setup is correct.&quot;), mdx(&quot;p&quot;, null, &quot;Let\u2019s first create a directory for all the apps we will be making:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ mkdir ~/apps\n&quot;)), mdx(&quot;p&quot;, null, &quot;Go to the new directory you\u2019ve just made:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ cd ~/apps\n&quot;)), mdx(&quot;p&quot;, null, &quot;Create a new rails project:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ rails new myapp\n&quot;)), mdx(&quot;p&quot;, null, &quot;Go inside the project:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ cd myapp\n&quot;)), mdx(&quot;p&quot;, null, &quot;Start the project:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ rails server\n\n# for the shorthand way\n$ rails s\n&quot;)), mdx(&quot;p&quot;, null, &quot;On your browser go to: &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;http://localhost:3000&quot;)), mdx(&quot;p&quot;, null, &quot;IF you see this:\n&quot;, mdx(&quot;span&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-wrapper&quot;,
+    &quot;style&quot;: {
+      &quot;position&quot;: &quot;relative&quot;,
+      &quot;display&quot;: &quot;block&quot;,
+      &quot;marginLeft&quot;: &quot;auto&quot;,
+      &quot;marginRight&quot;: &quot;auto&quot;,
+      &quot;maxWidth&quot;: &quot;590px&quot;
+    }
+  }), &quot;\n      &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;span&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-link&quot;,
+    &quot;href&quot;: &quot;/static/8a1746e93f65c5fa8793fc34439ec519/85f73/setup-success.png&quot;,
+    &quot;style&quot;: {
+      &quot;display&quot;: &quot;block&quot;
+    },
+    &quot;target&quot;: &quot;_blank&quot;,
+    &quot;rel&quot;: [&quot;noopener&quot;]
+  }), &quot;\n    &quot;, mdx(&quot;span&quot;, _extends({
+    parentName: &quot;a&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-background-image&quot;,
+    &quot;style&quot;: {
+      &quot;paddingBottom&quot;: &quot;66.01851851851852%&quot;,
+      &quot;position&quot;: &quot;relative&quot;,
+      &quot;bottom&quot;: &quot;0&quot;,
+      &quot;left&quot;: &quot;0&quot;,
+      &quot;backgroundImage&quot;: &quot;url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB1klEQVQ4y4WTUY/SQBSF++N8883Ed1/9F/rkv9jE8KCu6wsxmk0MJqtZF9Bdtoil0iKC7tqWMhS2pUCnn1MQslvAneRmOnfOnDn39oxGbqRpupylJPuaC8Hw8JC42yUJw0Vujfk3Xx/aVrJrwNTzGBeLhKUS+P5/sVsJVwDXdTGbTTq9Hl1FdDEY8N220c/PF3t5/AbhanMFCFV5nlIXBCOGA0EghkqgwHE9wijaqVJbJ9bJ3K2pOiwFJJmqq6yrKpIlfCHg5hktf9OKO5kHJHGbZGIwn5jMoiZJ1FBrU4WFlPFWlVq+3CwtZ31kbBKNLC46TX6a3zBrp3R/NOg7NpOxiZx2lBPmG73U8olUTplGJr/tOo2zL+jld9TeH1D79JbPx0folRPM0zLjwCBNrtY22qEwW0X4v3RqH48xWmWqdoETe49q6xlWq067YWCUK4z8ljp4C2E2ZrMBuvWKN/oj9qp3sJwPqjyotJ9SqN3lZf0BhbN7dJ0D1ZvodsJ4HlJqP2a/cZ+i8RA/tBBhD+PyNV/dfRXPOeo8oe682Go3bbfrU6J4jBj6DMWIOEqXjtnysjb+8k3LpMhU0u/7OH/cxasQYqBM7uL1VXgOwUgonNz6Wv4CzVjjo/w5xGEAAAAASUVORK5CYII=&apos;)&quot;,
+      &quot;backgroundSize&quot;: &quot;cover&quot;,
+      &quot;display&quot;: &quot;block&quot;
+    }
+  })), &quot;\n  &quot;, mdx(&quot;img&quot;, _extends({
+    parentName: &quot;a&quot;
+  }, {
+    &quot;className&quot;: &quot;gatsby-resp-image-image&quot;,
+    &quot;alt&quot;: &quot;Rails successful install&quot;,
+    &quot;title&quot;: &quot;Rails successful install&quot;,
+    &quot;src&quot;: &quot;/static/8a1746e93f65c5fa8793fc34439ec519/799d3/setup-success.png&quot;,
+    &quot;srcSet&quot;: [&quot;/static/8a1746e93f65c5fa8793fc34439ec519/00d96/setup-success.png 148w&quot;, &quot;/static/8a1746e93f65c5fa8793fc34439ec519/0b23c/setup-success.png 295w&quot;, &quot;/static/8a1746e93f65c5fa8793fc34439ec519/799d3/setup-success.png 590w&quot;, &quot;/static/8a1746e93f65c5fa8793fc34439ec519/2a3d6/setup-success.png 885w&quot;, &quot;/static/8a1746e93f65c5fa8793fc34439ec519/ae92f/setup-success.png 1180w&quot;, &quot;/static/8a1746e93f65c5fa8793fc34439ec519/85f73/setup-success.png 2160w&quot;],
+    &quot;sizes&quot;: &quot;(max-width: 590px) 100vw, 590px&quot;,
+    &quot;style&quot;: {
+      &quot;width&quot;: &quot;100%&quot;,
+      &quot;height&quot;: &quot;100%&quot;,
+      &quot;margin&quot;: &quot;0&quot;,
+      &quot;verticalAlign&quot;: &quot;middle&quot;,
+      &quot;position&quot;: &quot;absolute&quot;,
+      &quot;top&quot;: &quot;0&quot;,
+      &quot;left&quot;: &quot;0&quot;
+    },
+    &quot;loading&quot;: &quot;lazy&quot;
+  })), &quot;\n  &quot;), &quot;\n    &quot;)), mdx(&quot;h4&quot;, null, &quot;Congrats! You\u2019ve setup everything properly.&quot;), mdx(&quot;h2&quot;, null, &quot;Bootcamp dev environment&quot;), mdx(&quot;p&quot;, null, &quot;TsekAsia\u2019s development team is an avid fan of Docker, and Foreman.&quot;), mdx(&quot;p&quot;, null, &quot;Docker allows use to containerize our development environments, but we won\u2019t use it for that purpose. We will use docker with &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;docker-compose&quot;), &quot; so we won\u2019t have to install and setup other dependencies such as &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;postgresql&quot;), &quot; and &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;redis&quot;), &quot;.&quot;), mdx(&quot;p&quot;, null, &quot;Foreman is a Procfile-based application manager. It allows us to run multiple services all at the same time. We can run, &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;$ rails s&quot;), &quot;, &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;$ docker-compose up&quot;), &quot;, and &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;$ bin/webpack-dev-server start&quot;), &quot; all at the same time, in one terminal window.&quot;), mdx(&quot;p&quot;, null, &quot;We would like to focus more on learning how to use and harness Ruby on Rails with React to its fullest and mitigate the setup process for your development environment. This will also lessen setup time for each individual projects. This would mean, we could focus more on the lessons at hand.&quot;), mdx(&quot;p&quot;, null, mdx(&quot;strong&quot;, {
+    parentName: &quot;p&quot;
+  }, mdx(&quot;em&quot;, {
+    parentName: &quot;strong&quot;
+  }, &quot;(This is also our Engineering team\u2019s development environment. Following these steps would not only give you a leaner development environment, you\u2019ll also know some trade secrets on how to make your life easier.)&quot;))), mdx(&quot;blockquote&quot;, null, mdx(&quot;p&quot;, {
+    parentName: &quot;blockquote&quot;
+  }, mdx(&quot;strong&quot;, {
+    parentName: &quot;p&quot;
+  }, mdx(&quot;em&quot;, {
+    parentName: &quot;strong&quot;
+  }, &quot;If you will be using Docker for your dev environment, please do not install postgresql through, &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;em&quot;
+  }, &quot;$ brew install postgresql&quot;), &quot; as this will conflict with the docker instance of postgresql. Specifically, your machine will prioritize allocation of port 5432 to your local postgreql install.&quot;)))), mdx(&quot;p&quot;, null, &quot;With this, let\u2019s go ahead and set up other development dependencies!&quot;), mdx(&quot;h2&quot;, null, &quot;Docker&quot;), mdx(&quot;p&quot;, null, &quot;Docker already has this guide in their website and it\u2019s comprehensive enough that I don\u2019t need to explain it here. But, Here\u2019s the link to their setup guide for MacOS.&quot;), mdx(&quot;p&quot;, null, &quot;Docker CE: &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;https://docs.docker.com/install/linux/docker-ce/ubuntu/&quot;
+  }), &quot;https://docs.docker.com/install/linux/docker-ce/ubuntu/&quot;)), mdx(&quot;p&quot;, null, &quot;Docker Compose: &quot;, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;p&quot;
+  }, {
+    &quot;href&quot;: &quot;https://docs.docker.com/compose/install/&quot;
+  }), &quot;https://docs.docker.com/compose/install/&quot;)), mdx(&quot;p&quot;, null, mdx(&quot;em&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;Click on the Linux tab in Install Compose section&quot;)), mdx(&quot;p&quot;, null, &quot;We won\u2019t be using Docker with &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;docker-compose&quot;), &quot; up until the latter parts of the Bootcamp, but it\u2019s cool to have this installed already so we won\u2019t need to later on.&quot;), mdx(&quot;h2&quot;, null, &quot;Foreman&quot;), mdx(&quot;p&quot;, null, &quot;We won\u2019t be using foreman up until the middle of the bootcamp, but it\u2019s better to have it installed now.&quot;), mdx(&quot;p&quot;, null, &quot;Install foreman by doing this,&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ gem install foreman\n&quot;)), mdx(&quot;p&quot;, null, &quot;Test it out by going to the rails app a rails app, and create a file in your root directory &quot;, mdx(&quot;inlineCode&quot;, {
+    parentName: &quot;p&quot;
+  }, &quot;Procfile&quot;), &quot; with the following contents:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {}), &quot;app: rails s\n&quot;)), mdx(&quot;p&quot;, null, &quot;Once saved, run:&quot;), mdx(&quot;pre&quot;, null, mdx(&quot;code&quot;, _extends({
+    parentName: &quot;pre&quot;
+  }, {
+    &quot;className&quot;: &quot;language-bash&quot;
+  }), &quot;$ foreman start\n&quot;)), mdx(&quot;p&quot;, null, &quot;And you\u2019re all good to go!&quot;));
+}
+;
+MDXContent.isMDXComponent = true;</content:encoded></item><item><title><![CDATA[Dual booting your Windows laptop with Ubuntu]]></title><link>https://fullstackbootcamp.github.io/dual-boot-your-windows-10-laptop/</link><guid isPermaLink="false">https://fullstackbootcamp.github.io/dual-boot-your-windows-10-laptop/</guid><pubDate>Sun, 26 Jan 2020 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
+
+function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) return {}; var target = {}; var sourceKeys = Object.keys(source); var key, i; for (i = 0; i &lt; sourceKeys.length; i++) { key = sourceKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; target[key] = source[key]; } return target; }
+
+/* @jsx mdx */
+var _frontmatter = {
+  &quot;title&quot;: &quot;Dual booting your Windows laptop with Ubuntu&quot;,
+  &quot;date&quot;: &quot;2020-01-26&quot;,
+  &quot;publish&quot;: true
+};
+
+var makeShortcode = function makeShortcode(name) {
+  return function MDXDefaultShortcode(props) {
+    console.warn(&quot;Component &quot; + name + &quot; was not imported, exported, or provided by MDXProvider as global scope&quot;);
+    return mdx(&quot;div&quot;, props);
+  };
+};
+
+var layoutProps = {
+  _frontmatter: _frontmatter
+};
+var MDXLayout = &quot;wrapper&quot;;
+return function MDXContent(_ref) {
+  var components = _ref.components,
+      props = _objectWithoutProperties(_ref, [&quot;components&quot;]);
+
+  return mdx(MDXLayout, _extends({}, layoutProps, props, {
+    components: components,
+    mdxType: &quot;MDXLayout&quot;
+  }), mdx(&quot;p&quot;, null, &quot;So you\u2019ve got accepted to FullStack Bootcamp, or you want to join in the webcast and follow along the lessons. But, you\u2019re using a Windows OS and found out that Ruby on Rails doesn\u2019t really play well with Windows.&quot;), mdx(&quot;p&quot;, null, &quot;You\u2019ve already tried out using Windows Subsystem for Linux (WSL), and saw how limited (and slow) it is.&quot;), mdx(&quot;p&quot;, null, &quot;You\u2019ve also tried using a VM, but saw how slow it\u2019s running.&quot;), mdx(&quot;p&quot;, null, &quot;Tried vagrant? (Having a hard time with setting up connection from vagrant to windows)&quot;), mdx(&quot;p&quot;, null, &quot;Uhh, how about a direct Ruby on Rails install? (Probably installed some gems and saw it isn\u2019t working as it should)&quot;), mdx(&quot;p&quot;, null, &quot;Best way to go?&quot;), mdx(&quot;p&quot;, null, &quot;Get down and dirty with a unix OS, specifically with Ubuntu! (Any linux distro would do actually.) You can install a dual-boot instead so you won\u2019t lose your Windows install. (We don\u2019t want that to happen specially if your windows is licensed.)&quot;), mdx(&quot;p&quot;, null, &quot;Unlike setting up your Ruby on Rails development environment, there are lots of great articles in the web which gives you a step-by-step guide on how to dual boot your machine.&quot;), mdx(&quot;p&quot;, null, &quot;Here are a few of them:&quot;), mdx(&quot;ul&quot;, null, mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://hackernoon.com/installing-ubuntu-18-04-along-with-windows-10-dual-boot-installation-for-deep-learning-f4cd91b58557&quot;
+  }), &quot;https://hackernoon.com/installing-ubuntu-18-04-along-with-windows-10-dual-boot-installation-for-deep-learning-f4cd91b58557&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/&quot;
+  }), &quot;https://itsfoss.com/install-ubuntu-1404-dual-boot-mode-windows-8-81-uefi/&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://vitux.com/how-to-install-ubuntu-18-04-along-with-windows-10/&quot;
+  }), &quot;https://vitux.com/how-to-install-ubuntu-18-04-along-with-windows-10/&quot;)), mdx(&quot;li&quot;, {
+    parentName: &quot;ul&quot;
+  }, mdx(&quot;a&quot;, _extends({
+    parentName: &quot;li&quot;
+  }, {
+    &quot;href&quot;: &quot;https://www.linuxtechi.com/dual-boot-ubuntu-18-04-lts-with-windows-10/&quot;
+  }), &quot;https://www.linuxtechi.com/dual-boot-ubuntu-18-04-lts-with-windows-10/&quot;))));
+}
+;
+MDXContent.isMDXComponent = true;</content:encoded></item><item><title><![CDATA[Why Ruby on Rails and React JS]]></title><link>https://fullstackbootcamp.github.io/why-ruby-on-rails-and-react/</link><guid isPermaLink="false">https://fullstackbootcamp.github.io/why-ruby-on-rails-and-react/</guid><pubDate>Thu, 09 Jan 2020 00:00:00 GMT</pubDate><content:encoded>function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i &lt; arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _objectWithoutProperties(source, excluded) { if (source == null) return {}; var target = _objectWithoutPropertiesLoose(source, excluded); var key, i; if (Object.getOwnPropertySymbols) { var sourceSymbolKeys = Object.getOwnPropertySymbols(source); for (i = 0; i &lt; sourceSymbolKeys.length; i++) { key = sourceSymbolKeys[i]; if (excluded.indexOf(key) &gt;= 0) continue; if (!Object.prototype.propertyIsEnumerable.call(source, key)) continue; target[key] = source[key]; } } return target; }
 
